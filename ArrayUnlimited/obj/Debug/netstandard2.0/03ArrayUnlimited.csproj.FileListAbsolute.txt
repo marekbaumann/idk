@@ -1,0 +1,8 @@
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\03ArrayUnlimited\bin\Debug\netstandard2.0\03ArrayUnlimited.deps.json
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\03ArrayUnlimited\bin\Debug\netstandard2.0\03ArrayUnlimited.dll
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\03ArrayUnlimited\bin\Debug\netstandard2.0\03ArrayUnlimited.pdb
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\03ArrayUnlimited\obj\Debug\netstandard2.0\03ArrayUnlimited.csprojAssemblyReference.cache
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\03ArrayUnlimited\obj\Debug\netstandard2.0\03ArrayUnlimited.AssemblyInfoInputs.cache
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\03ArrayUnlimited\obj\Debug\netstandard2.0\03ArrayUnlimited.AssemblyInfo.cs
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\03ArrayUnlimited\obj\Debug\netstandard2.0\03ArrayUnlimited.dll
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\03ArrayUnlimited\obj\Debug\netstandard2.0\03ArrayUnlimited.pdb

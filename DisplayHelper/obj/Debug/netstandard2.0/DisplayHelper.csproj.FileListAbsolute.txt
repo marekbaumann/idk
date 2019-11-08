@@ -1,0 +1,15 @@
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\DisplayHelper\bin\Debug\netstandard2.0\DisplayHelper.deps.json
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\DisplayHelper\bin\Debug\netstandard2.0\DisplayHelper.dll
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\DisplayHelper\bin\Debug\netstandard2.0\DisplayHelper.pdb
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\DisplayHelper\bin\Debug\netstandard2.0\03ArrayUnlimited.dll
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\DisplayHelper\bin\Debug\netstandard2.0\03ArrayUnlimited.pdb
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\DisplayHelper\obj\Debug\netstandard2.0\DisplayHelper.csprojAssemblyReference.cache
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\DisplayHelper\obj\Debug\netstandard2.0\DisplayHelper.AssemblyInfoInputs.cache
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\DisplayHelper\obj\Debug\netstandard2.0\DisplayHelper.AssemblyInfo.cs
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\DisplayHelper\obj\Debug\netstandard2.0\DisplayHelper.csproj.CopyComplete
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\DisplayHelper\obj\Debug\netstandard2.0\DisplayHelper.dll
+C:\Users\Marek\Source\Repos\TomasKazda\2019P2CSharpBasics\DisplayHelper\obj\Debug\netstandard2.0\DisplayHelper.pdb
+C:\Users\Marek\Desktop\2019P2CSharpBasics\DisplayHelper\obj\Debug\netstandard2.0\DisplayHelper.dll
+C:\Users\Marek\Desktop\2019P2CSharpBasics\DisplayHelper\obj\Debug\netstandard2.0\DisplayHelper.pdb
+C:\Users\Marek\Desktop\Implemntace\DisplayHelper\obj\Debug\netstandard2.0\DisplayHelper.dll
+C:\Users\Marek\Desktop\Implemntace\DisplayHelper\obj\Debug\netstandard2.0\DisplayHelper.pdb
