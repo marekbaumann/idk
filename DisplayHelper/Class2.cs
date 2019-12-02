@@ -6,27 +6,13 @@ namespace DisplayHelper
 {
     public class Item
     {
-        private string _name;
-        private object _value;
+        public string _name { get; set; }
+        public object _value { get; set; }
 
         public Item(string name, object value)
         {
             _name = name;
             _value = value;
-        }
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-        }
-        public string Value
-        {
-            get
-            {
-                return _value.ToString();
-            }
-        }
+        }  
     }
 }

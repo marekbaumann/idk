@@ -7,7 +7,7 @@ namespace DisplayHelper
     public class Display
     {
         private int _width, _height, _x, _y;
-        private List<Item> Items;
+        public Item _item;
         private int _i = 1;
 
 
@@ -20,11 +20,9 @@ namespace DisplayHelper
         }
         public void AddItem(Item item)
         {
-            Items.Add(item);  
-        }
-        public void Repaint()
-        {
-            Console.Clear();
+            _item = item;
+
+
             Console.SetCursorPosition(_x, _y);
             Console.Write("+");
 
@@ -32,7 +30,7 @@ namespace DisplayHelper
             {
                 Console.Write("─");
             }
-
+            
             Console.Write("+");
 
             for (int i = 0; i < _height - 2; i++)
@@ -42,7 +40,7 @@ namespace DisplayHelper
             }
             Console.SetCursorPosition(_x, _y + _height - 1);
             Console.Write("+");
-
+            
             for (int i = 0; i < _width - 2; i++)
             {
                 Console.Write("─");
@@ -55,12 +53,18 @@ namespace DisplayHelper
                 Console.Write("I");
             }
 
-            foreach(Item item in Items)
-            {
-                Console.SetCursorPosition(_x, _y + _i);
-                Console.Write(item.Value);
-                _i++;
-            }
+            Console.SetCursorPosition(_x + 1, _y + _i);
+            Console.Write($"{_item._name}: ");
+            Console.Write(_item._value);
+            _i++;
+            Console.SetCursorPosition(0, _height * 2);
+            
         }
+        public void Repaint()
+        {
+            Console.Clear();
+        }
+
+        
     }
 }

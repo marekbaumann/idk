@@ -4,32 +4,17 @@ using System.Text;
 
 namespace Grading
 {
-    class GradeAvg : Grade
+    interface ICustomList
     {
-        public int Count;
-
-        public GradeAvg(string subject)
-        {
-            this.Subject = subject;
-        }
-
-        public double GetAverage()
-        {
-            return Math.Round(Score / Count, 1);
-        }
-
-        public bool AddGrade(Grade grade)
-        {
-            if (grade.Subject != Subject) return false;
-
-            Score += grade.Score;
-            Count += 1;
-            return true;
-        }
-
-        public override string ToString()
-        {
-            return Subject + ": " + GetAverage() + " (" + Count + ")";
-        }
+        GradeAvg Add(Grade g);
+        int Add(GradeAvg g);
+        bool Delete(GradeAvg g);
+        bool Delete(int position);
+        GradeAvg Get(int position);
+        GradeAvg[] GetAll();
+        int IndexOf(GradeAvg g);
+        int IndexOf(string subject);
+        int Count { get; }
+        int Length { get; }
     }
 }
