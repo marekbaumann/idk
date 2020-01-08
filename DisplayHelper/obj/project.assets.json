@@ -175,7 +175,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "C:\\Users\\Marek\\Desktop\\Implemntace\\03ArrayUnlimited\\03ArrayUnlimited.csproj",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -186,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marek\\Desktop\\Implemntace\\DisplayHelper\\DisplayHelper.csproj",
+      "projectUniqueName": "C:\\Users\\Marek\\Source\\Repos\\marekbaumann\\idk\\DisplayHelper\\DisplayHelper.csproj",
       "projectName": "DisplayHelper",
-      "projectPath": "C:\\Users\\Marek\\Desktop\\Implemntace\\DisplayHelper\\DisplayHelper.csproj",
+      "projectPath": "C:\\Users\\Marek\\Source\\Repos\\marekbaumann\\idk\\DisplayHelper\\DisplayHelper.csproj",
       "packagesPath": "C:\\Users\\Marek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marek\\Desktop\\Implemntace\\DisplayHelper\\obj\\",
+      "outputPath": "C:\\Users\\Marek\\Source\\Repos\\marekbaumann\\idk\\DisplayHelper\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -208,11 +207,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {
-            "C:\\Users\\Marek\\Desktop\\Implemntace\\03ArrayUnlimited\\03ArrayUnlimited.csproj": {
-              "projectPath": "C:\\Users\\Marek\\Desktop\\Implemntace\\03ArrayUnlimited\\03ArrayUnlimited.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -232,22 +227,17 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Nepovedlo se najít projekt C:\\Users\\Marek\\Desktop\\Implemntace\\03ArrayUnlimited\\03ArrayUnlimited.csproj. Zkontrolujte, že odkaz na projekt je platný a že existuje soubor projektu.",
-      "libraryId": "C:\\Users\\Marek\\Desktop\\Implemntace\\03ArrayUnlimited\\03ArrayUnlimited.csproj",
-      "targetGraphs": [
-        ".NETStandard,Version=v2.0"
-      ]
-    }
-  ]
+  }
 }

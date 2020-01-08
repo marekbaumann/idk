@@ -17,3 +17,8 @@ C:\Users\Marek\Desktop\2019P2CSharpBasics\Grading\obj\Debug\netcoreapp2.1\02Grad
 C:\Users\Marek\Desktop\2019P2CSharpBasics\Grading\obj\Debug\netcoreapp2.1\02Grading.pdb
 C:\Users\Marek\Desktop\Implemntace\Grading\obj\Debug\netcoreapp2.1\02Grading.dll
 C:\Users\Marek\Desktop\Implemntace\Grading\obj\Debug\netcoreapp2.1\02Grading.pdb
+C:\Users\Marek\Source\Repos\marekbaumann\idk\Grading\obj\Debug\netcoreapp2.1\02Grading.dll
+C:\Users\Marek\Source\Repos\marekbaumann\idk\Grading\obj\Debug\netcoreapp2.1\02Grading.pdb
+C:\Users\Marek\Source\Repos\marekbaumann\idk\Grading\obj\Debug\netcoreapp2.1\02Grading.csprojAssemblyReference.cache
+C:\Users\Marek\Source\Repos\marekbaumann\idk\Grading\obj\Debug\netcoreapp2.1\02Grading.AssemblyInfoInputs.cache
+C:\Users\Marek\Source\Repos\marekbaumann\idk\Grading\obj\Debug\netcoreapp2.1\02Grading.AssemblyInfo.cs

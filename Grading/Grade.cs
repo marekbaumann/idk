@@ -17,11 +17,6 @@ namespace Grading
         {
             return $"{Subject} = {Score}";
         }
-
-      
-
-
-
     }
 
 }
