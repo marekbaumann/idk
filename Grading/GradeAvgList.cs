@@ -15,18 +15,22 @@ namespace Grading
             this.maxcnt = maxcnt;
         }
 
-        public int Count { 
-            get {
+        public int Count
+        {
+            get
+            {
                 for (int i = 0; i < _gt.Length; i++)
                 {
                     if (_gt[i] is null) return i;
-                } 
+                }
                 return _gt.Length;
-            } 
+            }
         }
 
-        public int Length { 
-            get {
+        public int Length
+        {
+            get
+            {
                 return _gt.Length;
             }
         }
@@ -57,7 +61,8 @@ namespace Grading
                 idx = Count;
                 if (idx == Length) ResizeArray(ref _gt, maxcnt);
                 _gt[idx] = g;
-            } else
+            }
+            else
             {
                 _gt[idx].Count += g.Count;
                 _gt[idx].Score += g.Score;

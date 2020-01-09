@@ -3,11 +3,18 @@ using DisplayHelper;
 
 namespace Grading
 {
- 
+
     class Program
     {
         static void Main(string[] args)
         {
+            CertificateTable table = new CertificateTable();
+
+            Display displayConfirm = new Display(30, 15, 10, 10);
+            Display displayInput = new Display(30, 15, 10, 10);
+            Display displayInput2 = new Display(30, 15, 10, 10);
+            Display displayGrading = new Display(30, 15, 10, 10);
+
             Grade[] grades = new Grade[9];
             grades[0] = new Grade() { Subject = "MAT", Score = 1 };
             grades[1] = new Grade() { Subject = "CJL", Score = 4 };
@@ -19,31 +26,77 @@ namespace Grading
             grades[7] = new Grade() { Subject = "MAT", Score = 2 };
             grades[8] = new Grade() { Subject = "MAT", Score = 2 };
 
-            CertificateTable table = new CertificateTable();
+            displayInput.AddItem(new Item("---- zadávání předmětu ----", ""));
+            displayInput.AddItem(new Item("Zadejte předmět: ", ""));
+            displayInput2.AddItem(new Item("---- zadávání známky ----", ""));
+            displayInput2.AddItem(new Item("Zadejte známku: ", ""));
+            displayConfirm.AddItem(new Item("Chceš vložit dalšího? [A/N]", ""));
+            string pokracovat = "A";
+            while (true)
+            {
+                if (pokracovat != "A")
+                {
+                    break;
+                }
+                else
+                {
+                    Grade[] grades1 = new Grade[grades.Length];
+                    for (int i = 0; i < grades.Length - 1; i++)
+                    {
+                        grades1[i] = grades[i];
+                    }
+                    grades = grades1;
+                    displayInput.Repaint();
+                    string subject = Console.ReadLine();
+                    while ((subject != "PRG") && (subject != "MAT") && (subject != "CJL"))
+                    {
+                        Console.WriteLine("Nezadali jste validní předmět. Zadejte znovu: ");
+                        subject = Console.ReadLine();
+                        if (subject == "PRG" || subject == "MAT" || subject == "CJL")
+                        {
+                            break;
+                        }
+                    }
+                    displayInput2.Repaint();
+                    string znamčička = Console.ReadLine();
+                    while (true)
+                    {
+                        while (!(int.TryParse(znamčička, out int result)))
+                        {
+                            Console.WriteLine("Zadej číslo: ");
+                            znamčička = Console.ReadLine();
+                        }
+                        int znamka = int.Parse(znamčička);
+                        if (znamka > 5 || znamka < 1)
+                        {
+                            Console.WriteLine("Zadej číslo v rozmezí 1-5: ");
+                            znamčička = Console.ReadLine();
+                            continue;
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    displayConfirm.Repaint();
+                    grades[grades.Length - 1] = new Grade() { Subject = subject, Score = Convert.ToDouble(znamčička) };
+                    pokracovat = Console.ReadLine();
+                }
 
-            Display displayGrading = new Display(40, 20, 10, 10);
-            displayGrading.AddItem(new Item(" Vysvědčení ", ""));
-            Display displayInput = new Display(40, 20, 60, 10);
-            displayInput.AddItem(new Item(" zadávání předmětu ", ""));
-            displayInput.AddItem(new Item("Předmět", ""));
+            }
+
+            displayGrading.AddItem(new Item("-- Vysvědčení --", ""));
+            displayGrading.AddItem(new Item("", ""));
             foreach (var grade in grades)
             {
                 GradeAvg ga = table.AddGrade(grade);
             }
+
             foreach (var item in table.GetAllGrades())
             {
                 displayGrading.AddItem(new Item(item.Subject, item.GetAverage()));
             }
-            string x = Console.ReadLine();
-            
-            Console.ReadKey();
-            Display displayInput2 = new Display(40, 20, 10, 30);
-            displayInput2.AddItem(new Item(" zadávání známky ", ""));
-            displayInput2.AddItem(new Item("Známka", ""));
-            Display displayConfirm = new Display(40, 20, 60, 30);
-            displayConfirm.AddItem(new Item("Chceš vložit dalšího? [A]", ""));
-
-            Console.ReadKey();
+            displayGrading.Repaint();
         }
     }
 }

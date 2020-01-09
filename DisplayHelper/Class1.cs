@@ -6,65 +6,66 @@ namespace DisplayHelper
 {
     public class Display
     {
-        private int _width, _height, _x, _y;
-        public Item _item;
+        public int width { get; protected set; }
+        public int height { get; protected set; }
+        public int x { get; protected set; }
+        public int y { get; protected set; }
+        private List<Item> Items = new List<Item>();
         private int _i = 1;
 
 
-        public Display(int width, int height, int x, int y)
+        public Display(int Width, int Height, int X, int Y)
         {
-            _width = width;
-            _height = height;
-            _x = x;
-            _y = y;                      
+            width = Width;
+            height = Height;
+            x = X;
+            y = Y;
         }
         public void AddItem(Item item)
         {
-            _item = item;
-
-
-            Console.SetCursorPosition(_x, _y);
-            Console.Write("+");
-
-            for (int i = 0; i < _width - 2; i++)
-            {
-                Console.Write("─");
-            }
-            
-            Console.Write("+");
-
-            for (int i = 0; i < _height - 2; i++)
-            {
-                Console.SetCursorPosition(_x, _y + i + 1);
-                Console.Write("I");
-            }
-            Console.SetCursorPosition(_x, _y + _height - 1);
-            Console.Write("+");
-            
-            for (int i = 0; i < _width - 2; i++)
-            {
-                Console.Write("─");
-            }
-            Console.Write("+");
-
-            for (int i = 0; i < _height - 2; i++)
-            {
-                Console.SetCursorPosition(_x + _width - 1, _y + _height - i - 2);
-                Console.Write("I");
-            }
-
-            Console.SetCursorPosition(_x + 1, _y + _i);
-            Console.Write($"{_item._name}: ");
-            Console.Write(_item._value);
-            _i++;
-            Console.SetCursorPosition(0, _height * 2);
-            
+            Items.Add(item);
         }
+
         public void Repaint()
         {
             Console.Clear();
-        }
+            Console.SetCursorPosition(x, y);
+            Console.Write("+");
 
-        
+            for (int i = 0; i < width - 2; i++)
+            {
+                Console.Write("─");
+            }
+
+            Console.Write("+");
+
+            for (int i = 0; i < height - 2; i++)
+            {
+                Console.SetCursorPosition(x, y + i + 1);
+                Console.Write("I");
+            }
+            Console.SetCursorPosition(x, y + height - 1);
+            Console.Write("+");
+
+            for (int i = 0; i < width - 2; i++)
+            {
+                Console.Write("─");
+            }
+            Console.Write("+");
+
+            for (int i = 0; i < height - 2; i++)
+            {
+                Console.SetCursorPosition(x + width - 1, y + height - i - 2);
+                Console.Write("I");
+            }
+
+            foreach (Item item in Items)
+            {
+                Console.SetCursorPosition(x + _i, y + _i);
+                Console.Write(item.name);
+                _i++;
+
+            }
+        }
     }
 }

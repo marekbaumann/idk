@@ -14,15 +14,7 @@
           "02Grading.dll": {}
         }
       },
-      "03ArrayUnlimited/1.0.0": {
-        "runtime": {
-          "03ArrayUnlimited.dll": {}
-        }
-      },
       "DisplayHelper/1.0.0": {
-        "dependencies": {
-          "03ArrayUnlimited": "1.0.0"
-        },
         "runtime": {
           "DisplayHelper.dll": {}
         }
@@ -31,11 +23,6 @@
   },
   "libraries": {
     "02Grading/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "03ArrayUnlimited/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

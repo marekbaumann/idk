@@ -6,13 +6,14 @@ namespace DisplayHelper
 {
     public class Item
     {
-        public string _name { get; set; }
-        public object _value { get; set; }
+        public string name { get; protected set; }
+        public object value { get; protected set; }
 
-        public Item(string name, object value)
+        public Item(string Name, object Value)
         {
-            _name = name;
-            _value = value;
-        }  
+            name = Name;
+            value = Value;
+        }
+
     }
 }

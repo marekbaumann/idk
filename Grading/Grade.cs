@@ -9,10 +9,6 @@ namespace Grading
         public string Subject;
         public double Score;
 
-        public Grade()
-        {
-        }
-
         public override string ToString()
         {
             return $"{Subject} = {Score}";
