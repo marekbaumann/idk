@@ -61,10 +61,10 @@ namespace DisplayHelper
 
             foreach (Item item in Items)
             {
-                Console.SetCursorPosition(x + _i, y + _i);
+                Console.SetCursorPosition(x + 2, y + _i);
                 Console.Write(item.name);
+                Console.Write(item.value);
                 _i++;
-
             }
         }
     }

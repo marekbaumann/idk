@@ -10,10 +10,10 @@ namespace Grading
         {
             CertificateTable table = new CertificateTable();
 
-            Display displayConfirm = new Display(30, 15, 10, 10);
-            Display displayInput = new Display(30, 15, 10, 10);
-            Display displayInput2 = new Display(30, 15, 10, 10);
-            Display displayGrading = new Display(30, 15, 10, 10);
+            Display displayConfirm = new Display(35, 15, 10, 10);
+            Display displayInput = new Display(35, 15, 10, 10);
+            Display displayInput2 = new Display(35, 15, 10, 10);
+            Display displayGrading = new Display(35, 15, 10, 10);
 
             Grade[] grades = new Grade[9];
             grades[0] = new Grade() { Subject = "MAT", Score = 1 };
@@ -40,8 +40,8 @@ namespace Grading
                 }
                 else
                 {
-                    Grade[] grades1 = new Grade[grades.Length];
-                    for (int i = 0; i < grades.Length - 1; i++)
+                    Grade[] grades1 = new Grade[grades.Length + 1];
+                    for (int i = 0; i < grades.Length; i++)
                     {
                         grades1[i] = grades[i];
                     }
@@ -50,7 +50,7 @@ namespace Grading
                     string subject = Console.ReadLine();
                     while ((subject != "PRG") && (subject != "MAT") && (subject != "CJL"))
                     {
-                        Console.WriteLine("Nezadali jste validní předmět. Zadejte znovu: ");
+                        Console.WriteLine("Nevalidní předmět. Zadejte znovu: ");
                         subject = Console.ReadLine();
                         if (subject == "PRG" || subject == "MAT" || subject == "CJL")
                         {
@@ -78,8 +78,9 @@ namespace Grading
                             break;
                         }
                     }
-                    displayConfirm.Repaint();
                     grades[grades.Length - 1] = new Grade() { Subject = subject, Score = Convert.ToDouble(znamčička) };
+
+                    displayConfirm.Repaint();
                     pokracovat = Console.ReadLine();
                 }
 
@@ -97,6 +98,7 @@ namespace Grading
                 displayGrading.AddItem(new Item(item.Subject, item.GetAverage()));
             }
             displayGrading.Repaint();
+            Console.ReadKey();
         }
     }
 }
